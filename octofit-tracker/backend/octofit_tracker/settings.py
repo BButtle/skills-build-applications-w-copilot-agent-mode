@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-@&p__hwdlpich+v*66troppn7+_2r6*d2y$%b)l3!1(cd0(rs^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "ominous-bassoon-gv5xx5pqjw52pvqj-8000.app.github.dev",  # Codespace URL
+    "localhost",
+]
 
 
 # Application definition
@@ -82,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'octofit_db',
-        'HOST': 'localhost',
+        'HOST': 'localhost',  # Update if the database is hosted elsewhere
         'PORT': 27017,
     }
 }
@@ -130,7 +133,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Allow all origins for CORS
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True  # Keep this for development; restrict in production
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',

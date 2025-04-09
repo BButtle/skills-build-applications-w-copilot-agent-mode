@@ -3,16 +3,14 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import User, Team, Activity, Leaderboard, Workout
+from django.http import JsonResponse
 
 @api_view(['GET'])
 def api_root(request, format=None):
     base_url = 'https://ominous-bassoon-gv5xx5pqjw52pvqj-8000.app.github.dev/'
-    return Response({
-        'users': base_url + 'api/users/',
-        'teams': base_url + 'api/teams/',
-        'activities': base_url + 'api/activities/',
-        'leaderboard': base_url + 'api/leaderboard/',
-        'workouts': base_url + 'api/workouts/',
+    return JsonResponse({
+        "message": "Welcome to the Octofit API!",
+        "url": base_url
     })
 
 class UserViewSet(viewsets.ModelViewSet):
