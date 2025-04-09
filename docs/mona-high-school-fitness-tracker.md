@@ -735,22 +735,22 @@ function App() {
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/activities">Activities</Link>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <Link class="nav-link" to="/activities">Activities</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/leaderboard">Leaderboard</Link>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/leaderboard">Leaderboard</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/teams">Teams</Link>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/teams">Teams</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/users">Users</Link>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/users">Users</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/workouts">Workouts</Link>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/workouts">Workouts</Link>
                 </li>
               </ul>
             </div>
@@ -815,11 +815,11 @@ function Leaderboard() {
   return (
     <div>
       <h1>Leaderboard</h1>
-      <table>
+      <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th>Username</th>
-            <th>Score</th>
+            <th scope="col">Username</th>
+            <th scope="col">Score</th>
           </tr>
         </thead>
         <tbody>
@@ -837,6 +837,120 @@ function Leaderboard() {
 
 export default Leaderboard;
 ```
+
+## Styling the OctoFit Tracker App
+
+To ensure a consistent and visually appealing design, the OctoFit Tracker App will use Bootstrap components for styling. The following guidelines should be followed:
+
+1. **Tables**: Use Bootstrap's `table` classes for displaying data in all components.
+2. **Buttons**: Use Bootstrap's `btn` classes for all buttons.
+3. **Headings**: Use Bootstrap's heading classes (e.g., `h1`, `h2`) for all headings.
+4. **Links**: Use Bootstrap's `nav-link` or `btn-link` classes for all links.
+5. **Navigation**: Use Bootstrap's `navbar` classes for the navigation menu.
+6. **Forms**: Use Bootstrap's `form` classes for all forms.
+7. **Cards**: Use Bootstrap's `card` classes for displaying grouped content.
+8. **Modals**: Use Bootstrap's `modal` classes for pop-up dialogs.
+
+### Example Bootstrap Integration
+
+#### Navigation Menu
+
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">OctoFit Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/activities">Activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/leaderboard">Leaderboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/teams">Teams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/workouts">Workouts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+```
+
+#### Table Example
+
+```html
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>thundergod</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>metalgeek</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### Button Example
+
+```html
+<button type="button" class="btn btn-primary">Submit</button>
+```
+
+#### Card Example
+
+```html
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Workout Plan</h5>
+    <p class="card-text">This is a detailed description of the workout plan.</p>
+    <a href="#" class="btn btn-primary">View Details</a>
+  </div>
+</div>
+```
+
+#### Modal Example
+
+```html
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This is the content of the modal.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Next Steps
+
+Ensure all components in the app (e.g., Activities, Leaderboard, Teams, Users, Workouts) follow these Bootstrap styling guidelines. Update the `App.js` and individual component files accordingly.
 
 ## App.css example
 
